@@ -5,12 +5,18 @@ import Formulario from "./components/Formulario"
 import Reposlist from "./components/Reposlist"
 
 function App() {
-  const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true)
+  const [inputUsuario, setInputUsuario] = useState('')
   const [nomeUsuario, setNomeUsuario] = useState('')
+
+  const carregarPerfil = () => {
+    setNomeUsuario(inputUsuario)
+  }
+
   return(
     <>
-
-    <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+  <p>Digite o nome de usuário do GitHub para carregar o perfil:</p>
+    <input type="text" value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} />
+    <button onClick={carregarPerfil}>Carregar Perfil</button>
 
 
       {nomeUsuario.length > 4 && (
