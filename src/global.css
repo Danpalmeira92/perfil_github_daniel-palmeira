@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html, #root {
+    width: 100%;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+:root {
+    --corPrincipal: rgb(76, 5, 130);
+    --corSecundaria: #c5c2c2;
+}
