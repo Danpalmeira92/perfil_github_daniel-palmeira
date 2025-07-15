@@ -14,12 +14,14 @@ function App() {
 
   return(
     <>
-  <p>Digite o nome de usuário do GitHub para carregar o perfil:</p>
-    <input type="text" value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} />
-    <button onClick={carregarPerfil}>Carregar Perfil</button>
+  <div className="iniciarAplicacao">
+    <p className="titulo" >Digite o nome de usuário do GitHub para carregar o perfil:</p>
+    <input className="inputUsuario" type="text" required value={inputUsuario} onChange={(e) => setInputUsuario(e.target.value)} />
+    <button className="botaoCarregar" onClick={carregarPerfil}>Carregar Perfil</button>
+  </div>
 
 
-      {nomeUsuario.length > 4 && (
+      {nomeUsuario.length > 0 && (
         <> 
         <Perfil nomeUsuario={nomeUsuario} />
         <Reposlist nomeUsuario={nomeUsuario} />

@@ -18,4 +18,34 @@ body, html, #root {
 :root {
     --corPrincipal: rgb(76, 5, 130);
     --corSecundaria: #c5c2c2;
+    --corDoBotao: rgb(30, 29, 29);
+}
+
+.titulo {
+    color: var(--corSecundaria);
+    margin: 8px 16px;
+}
+
+.inputUsuario {
+    width: 160px;
+    height: 30px;
+    margin: 8px 8px;
+}
+
+.botaoCarregar {
+    color: var(--corSecundaria);
+    background-color:var(--corDoBotao) ;
+    margin: 8px 8px;
+
+    &:hover {
+        background-color: rgb(37, 8, 63);
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.iniciarAplicacao {
+    display: flex;
+    align-items: center;
+    background-color: var(--corPrincipal);
 }
